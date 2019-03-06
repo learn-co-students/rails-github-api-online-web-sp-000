@@ -41,6 +41,10 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
+    better_errors (2.5.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
@@ -70,6 +74,7 @@ GEM
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
+    erubi (1.8.0)
     erubis (2.7.0)
     execjs (2.7.0)
     faraday (0.15.2)
@@ -107,6 +112,11 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     public_suffix (3.0.2)
     rack (2.0.5)
     rack-test (0.6.3)
@@ -213,6 +223,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   byebug
   capybara
   coffee-rails (~> 4.1.0)
@@ -222,6 +234,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pry
+  pry-byebug
+  pry-rails
   rack_session_access
   rails
   rspec-rails
@@ -235,4 +249,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.2
+   1.16.6
