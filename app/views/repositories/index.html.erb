@@ -1,12 +1,12 @@
 <div class = "container">
   <h1>Repos</h1>
   <!-- List repositories and display username here! -->
-  <h2><%= @user %></h2>
+  <h2><%= @user if @user %></h2>
   <ul>
   <% @repos.each do |repo| %>
 
       <% # binding.pry %>
-      <li><%= link_to repo["html_url"], href: repo["html_url"] %></li>
+      <li><%= link_to repo["name"], href: repo["html_url"] %></li>
   <% end %>
   </ul>
   <%= form_tag("/repositories/create", method: "post") do %>
