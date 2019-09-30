@@ -10,8 +10,10 @@ class ApplicationController < ActionController::Base
   def get_user
     resp = Faraday.get "https://api.github.com/user" do |req|
       req.headers['Authorization'] = "token #{session[:token]}"
-      req.params['client_id'] = ENV['GITHUB_CLIENT']
-      req.params['client_secret'] = ENV['GITHUB_SECRET']
+      req.body = {
+        'client_id': ENV['GITHUB_CLIENT'],
+        'client_secret': ENV['GITHUB_SECRET']
+      }
     end
     if resp.success?
       the_user = JSON.parse(resp.body)
