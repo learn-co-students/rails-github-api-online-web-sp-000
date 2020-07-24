@@ -219,7 +219,7 @@ DEPENDENCIES
   jquery-rails
   pry
   rack_session_access
-  rails (~> 5.0)
+  rails
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
